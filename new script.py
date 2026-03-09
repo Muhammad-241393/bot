@@ -24,14 +24,14 @@ SCREENSHOT_FOLDER   = os.environ.get("SCREENSHOT_FOLDER", "screenshots") # Put i
 MODEL_NAME = "llama-3.3-70b-versatile"
 
 # ==================== FAST MODE SETTINGS ====================
-MIN_INTERVAL         = 100   # 2.5 minutes (150 seconds)
-MAX_INTERVAL         = 130   # 3 minutes (180 seconds)
+MIN_INTERVAL         = 120   # 2.5 minutes (150 seconds)
+MAX_INTERVAL         = 180   # 3 minutes (180 seconds)
 MAX_REQUESTS_PER_HOUR = 40   # increased to accommodate both loops
 MIN_REQUEST_GAP      = 20    # 20 seconds between requests
 
 # ==================== TRADING ADVICE SETTINGS ====================
-ADVICE_MIN_INTERVAL  = 200   # 4.5 minutes (270 seconds)
-ADVICE_MAX_INTERVAL  = 260   # 5.5 minutes (330 seconds)
+ADVICE_MIN_INTERVAL  = 130   # 4.5 minutes (270 seconds)
+ADVICE_MAX_INTERVAL  = 190   # 5.5 minutes (330 seconds)
 
 # ==================== USER AGENT ROTATION ====================
 USER_AGENTS = [
@@ -803,4 +803,5 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             print("\n[!] Stopped by user")
         except Exception as e:
+
             print(f"\n[!] Fatal error: {e}")
